@@ -106,13 +106,7 @@
 		    }
 		})
 
-	//mix-it-up
-		var mixer = mixitup('.travel-single-slider', {
-	    selectors: {
-	        control: '[data-mixitup-control]'
-	    }
-	});
-	mixer.filter('.concerts');
+
 
 	
 })(jQuery);
