@@ -53,9 +53,13 @@ header {
           -webkit-transition: .4s;
           -o-transition: .4s;
           transition: .4s; }
-        header nav ul li a:hover {
+        header nav ul li a:hover, header nav ul li a.active {
           color: #3366ff !important;
-          font-weight: 70; }
+          font-weight: 700; }
+        header nav ul li a:hover, header nav ul li a.active:before {
+          -webkit-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+          transform: scaleX(1); }
         header nav ul li a:hover:before {
           -webkit-transform: scaleX(1);
           -ms-transform: scaleX(1);
@@ -106,52 +110,54 @@ header {
   position: relative;
   z-index: 111 !important; }
 
-.service-area .service-area-1 {
-  padding: 280px 0px; }
-  .service-area .service-area-1 h2 {
-    font-weight: 400;
-    font-size: 36px;
-    color: #000033;
-    padding-bottom: 30px; }
-  .service-area .service-area-1 p {
-    font-weight: 400;
-    font-size: 16px;
-    color: #666699;
-    line-height: 30px; }
-
-.service-area .service-area-2 {
-  padding-top: 100px; }
-  .service-area .service-area-2 .service-single-content-main {
-    max-width: 270px;
-    width: 100%;
-    padding: 50px 22px;
-    background: #f7f8fb;
-    -webkit-transition: .6s;
-    -o-transition: .6s;
-    transition: .6s; }
-    .service-area .service-area-2 .service-single-content-main h5 {
-      font-weight: 600;
+.service-area {
+  overflow: hidden; }
+  .service-area .service-area-1 {
+    padding: 280px 0px; }
+    .service-area .service-area-1 h2 {
+      font-weight: 400;
+      font-size: 36px;
       color: #000033;
-      font-size: 18px;
-      padding: 20px 0px; }
-    .service-area .service-area-2 .service-single-content-main p {
+      padding-bottom: 30px; }
+    .service-area .service-area-1 p {
       font-weight: 400;
       font-size: 16px;
-      color: #666699; }
-    .service-area .service-area-2 .service-single-content-main:nth-child(2) {
+      color: #666699;
+      line-height: 30px; }
+  .service-area .service-area-2 {
+    padding-top: 100px; }
+    .service-area .service-area-2 .service-single-content-main {
+      max-width: 270px;
+      width: 100%;
+      padding: 50px 22px;
+      background: #f7f8fb;
+      -webkit-transition: .6s;
+      -o-transition: .6s;
+      transition: .6s; }
+      .service-area .service-area-2 .service-single-content-main h5 {
+        font-weight: 600;
+        color: #000033;
+        font-size: 18px;
+        padding: 20px 0px; }
+      .service-area .service-area-2 .service-single-content-main p {
+        font-weight: 400;
+        font-size: 16px;
+        color: #666699; }
+      .service-area .service-area-2 .service-single-content-main:nth-child(2) {
+        margin-top: 50px; }
+      .service-area .service-area-2 .service-single-content-main:hover {
+        background: #e7dcff;
+        -webkit-box-shadow: 0px 39px 27px -17px rgba(0, 0, 0, 0.0705882);
+        box-shadow: 0px 39px 27px -17px rgba(0, 0, 0, 0.0705882); }
+    .service-area .service-area-2 .margin {
       margin-top: 50px; }
-    .service-area .service-area-2 .service-single-content-main:hover {
-      background: #e7dcff;
-      -webkit-box-shadow: 0px 39px 27px -17px rgba(0, 0, 0, 0.0705882);
-      box-shadow: 0px 39px 27px -17px rgba(0, 0, 0, 0.0705882); }
-  .service-area .service-area-2 .margin {
-    margin-top: 50px; }
 
 .travel {
   padding: 50px 0px;
   background: url("../images/contentbg.png");
   background-repeat: no-repeat;
-  background-position: -240px 0px; }
+  background-position: -240px 0px;
+  overflow: hidden; }
   .travel .travel-area-left {
     padding-top: 190px; }
     .travel .travel-area-left h4 {
@@ -190,29 +196,11 @@ header {
           transition: ease-in .1s; }
           .travel .travel-area-left ul li a:hover {
             font-weight: 700; }
+        .travel .travel-area-left ul li:hover, .travel .travel-area-left ul li .mixitup-control-active {
+          font-weight: 700; }
   .travel .travel-area-right {
-    position: relative; }
-    .travel .travel-area-right .owl-dots {
-      position: absolute;
-      right: 20px;
-      margin-top: 20px; }
-      .travel .travel-area-right .owl-dots button {
-        background: transparent;
-        color: inherit;
-        border: none;
-        padding: 0 !important;
-        font: inherit;
-        width: 10px;
-        height: 10px;
-        margin-right: 10px;
-        border-radius: 50%;
-        border: 1px solid #9966ff; }
-      .travel .travel-area-right .owl-dots button.active {
-        background: #9966ff;
-        outline: none !important;
-        -webkit-transition: .4s;
-        -o-transition: .4s;
-        transition: .4s; }
+    position: relative;
+    padding-top: 120px; }
     .travel .travel-area-right .slider-image-area1 {
       position: relative; }
       .travel .travel-area-right .slider-image-area1 a {
@@ -438,7 +426,7 @@ header {
           color: #3366ff; }
 
 .news-area {
-  padding-bottom: 100px; }
+  padding: 100px 0px; }
   .news-area h2 {
     font-weight: 400;
     font-size: 30px;

@@ -1,5 +1,3 @@
-(function($){
-
 	$(".scroll").on("click",function (event) {
         var $hash=$(this.hash);
         var $hasval=$(this).attr('href');
@@ -38,20 +36,8 @@
         });
     }
 
-	$('.header-main').ripples({
-		resolution: 500,
-		dropRadius: 10,
-        perturbance: 0.01,
-	});
-
-	$(window).scroll(function(){
-        if($(document).scrollTop()>50){
-            $('.navbar').addClass('navnew');
-        }
-        else{
-            $('.navbar').removeClass('navnew');
-        }
-    });
+	
+	
 
 		  var lastScrollTop = 0;
 		  var $navbar = $('.navbar');
@@ -93,7 +79,18 @@
 		    // console.log(margin);
 		  });
 
-	$('.clint-area-slider').owlCarousel({
+
+$(window).scroll(function(){
+        if($(document).scrollTop()>50){
+            $('.navbar').addClass('navnew');
+        }
+        else{
+            $('.navbar').removeClass('navnew');
+        }
+    });
+
+
+$('.clint-area-slider').owlCarousel({
 	    loop:true,
 	    margin:10,
 	    responsiveClass:true,
@@ -120,35 +117,19 @@
 	        }
 	    }
 	});
-	$('.travel-area-right').owlCarousel({
-		    loop:true,
-		    margin:10,
-		    responsiveClass:true,
-		    dots:true,
-		    animateIn:'fadeOut',
-	    	animateOut:'fadeInRight',
-		    navText:['<i class="fa fa-long-arrow-left" aria-hidden="true"></i>','<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'],
-		    responsive:{
-		        0:{
-		            items:1,
-		            nav:true
-		        },
-		        480:{
-		            items:1,
-		            nav:false
-		        },
-		         600:{
-		            items:1,
-		            nav:false
-		        },
-		        1000:{
-		            items:1,
-		            nav:false,
-		            loop:false,
-		            dots:true
-		        }
-		    }
-		});
-})(jQuery);
+
+$('.header-main').ripples({
+		resolution: 500,
+		dropRadius: 10,
+        perturbance: 0.01,
+	});
 
 
+var mixer = mixitup('.travel-single-slider', {
+	    selectors: {
+	        control: '[data-mixitup-control]'
+	    }
+	});
+	mixer.filter('all');
+
+AOS.init();

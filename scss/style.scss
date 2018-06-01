@@ -1,3 +1,23 @@
+@mixin breakpoint($point) {
+   @if $point == notebook {
+     @media (max-width: 1024px) { @content ; }
+  }
+   @else if $point == tablet {
+     @media (max-width: 768px) { @content ; }
+  }
+    @else if $point == mobilel {
+     @media (max-width: 425px) { @content ; }
+  }
+   @else if $point == mobiles {
+     @media (min-width: 375px)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 320px)  { @content ; }
+
+  }
+}
+
+
 h1,h2,h3,h4,h5{
 	font-family: 'Poppins', sans-serif;
 }
@@ -20,7 +40,6 @@ button{
 	}
 }
 //header
-
 header{
 	background: url("../images/Back.jpg");
 	background-size: cover;
@@ -50,9 +69,12 @@ header{
 						transform:scaleX(0) ;
 						transition: .4s;
 					}
-					&:hover{
+					&:hover,&.active{
 						color: #3366ff !important;
-						font-weight: 70;
+						font-weight: 700;
+					}
+					&:hover,&.active:before{
+						transform:scaleX(1);
 					}
 					&:hover:before{
 						transform:scaleX(1);
@@ -116,6 +138,7 @@ header{
 //service-area
 
 .service-area{
+	overflow: hidden;
 	.service-area-1{
 		padding: 280px 0px;
 		h2{
@@ -172,6 +195,7 @@ header{
     background: url("../images/contentbg.png");
     background-repeat: no-repeat;
     background-position: -240px 0px;
+    overflow: hidden;
 	.travel-area-left{
 		padding-top: 190px;
 		h4{
@@ -214,33 +238,37 @@ header{
 						font-weight: 700;
 					}
 				}
+				&:hover,.mixitup-control-active{
+			    	font-weight: 700;
+			    }
 			}
 		}
 	}
 	.travel-area-right{
 		position: relative;
-		.owl-dots{
-			position: absolute;
-			right:20px;
-			margin-top: 20px;
-			button{
-				background: transparent;
-			    color: inherit;
-			    border: none;
-			    padding: 0!important;
-			    font: inherit;
-			    width: 10px;
-			    height: 10px;
-			    margin-right: 10px;
-			    border-radius: 50%;
-			    border: 1px solid #9966ff;
-			}
-			button.active{
-			    background: #9966ff;
-			    outline: none !important;
-			    transition:.4s;
-			}
-		}
+		padding-top: 120px;
+		// .owl-dots{
+		// 	position: absolute;
+		// 	right:20px;
+		// 	margin-top: 20px;
+		// 	button{
+		// 		background: transparent;
+		// 	    color: inherit;
+		// 	    border: none;
+		// 	    padding: 0!important;
+		// 	    font: inherit;
+		// 	    width: 10px;
+		// 	    height: 10px;
+		// 	    margin-right: 10px;
+		// 	    border-radius: 50%;
+		// 	    border: 1px solid #9966ff;
+		// 	}
+		// 	button.active{
+		// 	    background: #9966ff;
+		// 	    outline: none !important;
+		// 	    transition:.4s;
+		// 	}
+		// }
 		.slider-image-area1{
 			position: relative;
 			a{
@@ -506,7 +534,7 @@ header{
 //news-area..
 
 .news-area{
-	padding-bottom: 100px;
+	padding: 100px 0px;
 	h2{
 		font-weight: 400;
 		font-size: 30px;
