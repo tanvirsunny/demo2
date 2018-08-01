@@ -14,6 +14,20 @@ $(document).ready(function(){
         
     });
 
+    $('.navbar-collapse li a').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1500);
+       return false;
+      }
+    }
+  });
 
 
     $('.one-time').slick({
@@ -22,13 +36,43 @@ $(document).ready(function(){
       speed: 1000,
       slidesToShow: 1
     });
-    $('.team-main-slider').slick({
-      dots: true,
-      infinite: true,
-      speed: 1000,
-      slidesToShow: 3
-    });
 
+
+    $('.responsive').slick({
+      dots: true,
+      infinite: false,
+      speed: 1000,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
 })
 
     var tl = new TimelineLite();
@@ -42,103 +86,53 @@ $(document).ready(function(){
     tl.to( $buttonarea, 1.3, {x:0,y:0, autoAlpha: 1});
     tl.to( $imageanim, 1.5, {x:0,y:0, autoAlpha: 1});
 
+
     var controller=new ScrollMagic.Controller();
 
     var ourScene=new ScrollMagic.Scene({
-      triggerElement:'.heading_sec',
+      triggerElement:'.why-us-mokup',
+      duretion:'200%',
+      triggerHook:.5
+    })
+    .setClassToggle('.why-us-mokup','why-us-mokup-fade-out')
+    .addTo(controller);
+
+    var ourScene=new ScrollMagic.Scene({
+      triggerElement:'.why-us-mokup2',
+      duretion:'200%',
+      triggerHook:.4
+    })
+    .setClassToggle('.why-us-mokup2','why-us-mokup-fade-out')
+    .addTo(controller);
+
+    var ourScene=new ScrollMagic.Scene({
+      triggerElement:'.why-us-mokup3',
+      duretion:'200%',
+      triggerHook:.5
+    })
+    .setClassToggle('.why-us-mokup3','why-us-mokup-fade-out')
+    .addTo(controller);
+
+
+    var controller=new ScrollMagic.Controller();
+
+    var ourScene=new ScrollMagic.Scene({
+      triggerElement:'.main-heading',
       duretion:'100%',
       triggerHook: 1
     })
-    .setClassToggle('.heading_sec','heading_sec_anim')
+    .setClassToggle('.main-heading','main-heading-anim')
     .addTo(controller);  
 
 
     var ourScene=new ScrollMagic.Scene({
-      triggerElement:'.process-text',
+      triggerElement:'.p-text',
       duretion:'100%',
       triggerHook: 1
     })
-    .setClassToggle('.process-text','process-text_anim')
+    .setClassToggle('.p-text','p-text-anim')
     .addTo(controller);
 
-    var ourScene=new ScrollMagic.Scene({
-      triggerElement:'.item_sec_1',
-      duretion:'100%',
-      triggerHook: 1
-    })
-    .setClassToggle('.item_sec_1','item_sec_1_anim')
-    .addTo(controller);
-    
-
-    var ourScene=new ScrollMagic.Scene({
-      triggerElement:'.item_sec_2',
-      duretion:'100%',
-      triggerHook: 1
-    })
-    
-    .setClassToggle('.item_sec_2','item_sec_1_anim2')
-    .addTo(controller);
-    
-
-    var ourScene=new ScrollMagic.Scene({
-      triggerElement:'.item_sec_3',
-      duretion:'100%',
-      triggerHook: 1
-    })
-    .setClassToggle('.item_sec_3','item_sec_1_anim3')
-    .addTo(controller);
-    
-
-    var ourScene=new ScrollMagic.Scene({
-      triggerElement:'.item_sec_4',
-      duretion:'100%',
-      triggerHook: 1
-    })
-    .setClassToggle('.item_sec_4','item_sec_1_anim4')
-    .addTo(controller);
-    
-
-    var ourScene=new ScrollMagic.Scene({
-          triggerElement:'.heading_sec_2',
-          duretion:'100%',
-          triggerHook: 1
-        })
-        .setClassToggle('.heading_sec_2','heading_sec_2_anim')
-        .addTo(controller);
-     
-
-     var ourScene=new ScrollMagic.Scene({
-        triggerElement:'.sec_text',
-        duretion:'100%',
-        triggerHook: 1
-      })
-      .setClassToggle('.sec_text','sec_text_anim')
-      .addTo(controller); 
-
-      var ourScene=new ScrollMagic.Scene({
-        triggerElement:'.protfulio-wrapper',
-        duretion:'100%',
-        triggerHook: 1
-      })
-      .setClassToggle('.protfulio-wrapper','protfulio-wrapper_anim')
-      .addTo(controller);
-
-
-      var ourScene=new ScrollMagic.Scene({
-        triggerElement:'.heading_sec_3',
-        duretion:'100%',
-        triggerHook: 1
-      })
-      .setClassToggle('.heading_sec_3','heading_sec_3_anim')
-      .addTo(controller); 
-
-      var ourScene=new ScrollMagic.Scene({
-        triggerElement:'.sec_text_3',
-        duretion:'100%',
-        triggerHook: 1
-      })
-      .setClassToggle('.sec_text_3','sec_text_3_anim')
-      .addTo(controller); 
 
       var ourScene=new ScrollMagic.Scene({
         triggerElement:'.service-process-heading',
@@ -165,15 +159,23 @@ $(document).ready(function(){
       .setClassToggle('.service-process-single-content','service-process-single-content_anim')
       .addTo(controller);
       
+      var ourScene=new ScrollMagic.Scene({
+        triggerElement:'.team-mokup',
+        duretion:'200%',
+        triggerHook:.5
+      })
+      .setClassToggle('.team-mokup','team-mokup-anim')
+      .addTo(controller);
+
 
       var ourScene=new ScrollMagic.Scene({
-        triggerElement:'.team-main-slider',
+        triggerElement:'.heading_sec_3',
         duretion:'100%',
         triggerHook: 1
       })
-      .setClassToggle('.team-main-slider','team-main-slider_anim')
+      .setClassToggle('.heading_sec_3','heading_sec_3_anim')
       .addTo(controller);
-      
+
 
       var ourScene=new ScrollMagic.Scene({
         triggerElement:'.heading_sec_4',
@@ -181,13 +183,4 @@ $(document).ready(function(){
         triggerHook: 1
       })
       .setClassToggle('.heading_sec_4','heading_sec_4_anim')
-      .addTo(controller);
-      
-
-      var ourScene=new ScrollMagic.Scene({
-        triggerElement:'.contact-us-main',
-        duretion:'100%',
-        triggerHook: 1
-      })
-      .setClassToggle('.contact-us-main','contact-us-main_anim')
       .addTo(controller);
