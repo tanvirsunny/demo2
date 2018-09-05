@@ -1,43 +1,31 @@
 $(document).ready(function(){
-   $('.autoplay').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true,
-      dots:true,
-      speed:1000,
-      fade: true,
-      autoplaySpeed: 3000
-    }).slickAnimation();
+    $('.navbar-toggler').click(function() { 
+          $(this).toggleClass('active');
+    });
 
+    $(window).scroll(function(){
+      if($(document).scrollTop()>50){
 
- $('.album-slider').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      speed:1000
-    }).slickAnimation();
+          $('.navbar').addClass('navnew');
+      }
+      else{
+          $('.navbar').removeClass('navnew');
+      }
+        
+    });
 
-
-
-  var $grid = $('.grid').isotope({
-    itemSelector: '.element-item',
-    layoutMode: 'fitRows'
+    $('.navbar-collapse li a').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1500);
+       return false;
+      }
+    }
   });
-// filter functions
-
-// bind filter button click
-  $('.filters-button-group').on( 'click', 'button', function() {
-    var filterValue = $( this ).attr('data-filter');
-    $grid.isotope({ filter: filterValue });
-  });
-// change is-checked class on buttons
-$('.button-group').each( function( i, buttonGroup ) {
-  var $buttonGroup = $( buttonGroup );
-  $buttonGroup.on( 'click', 'button', function() {
-    $buttonGroup.find('.is-checked').removeClass('is-checked');
-    $( this ).addClass('is-checked');
-  });
-});
-
-   
-    
 })
