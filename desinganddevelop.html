@@ -11,9 +11,10 @@
       <!-- custom-css -->
       <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto+Condensed:700" rel="stylesheet">
       <link href="css/font-awesome.min.css" rel="stylesheet">
+      <link href="css/aos.css" rel="stylesheet">
       <link rel="stylesheet" href="css/style.css">
 
-      <title>Digital Avengers</title>
+      <title>Digital & Develop </title>
   </head>
   <body>
   <!-- header -->
@@ -24,24 +25,29 @@
                    <h3>digital <span>avengers</span></h3>
                    </a>
                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                       <span class="navbar-toggler-icon"></span>
+                        <div class="icon-button"></div>
+                        <div class="icon-button"></div>
+                        <div class="icon-button"></div>
                    </button>
                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                        <ul class="navbar-nav my-lg-0" id="menu">
                            <li class="nav-item active">
-                               <a class="nav-link" href="#header">About <span class="sr-only">(current)</span></a>
+                               <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                           </li>
+                           <li class="nav-item active">
+                               <a class="nav-link" href="#services">Services <span class="sr-only">(current)</span></a>
                            </li>
                            <li class="nav-item">
-                               <a class=" scroll nav-link" href="#service-area">Services</a>
+                               <a class=" scroll nav-link" href="#project">Projects</a>
                            </li>
                            <li class="nav-item">
-                               <a class=" scroll nav-link" href="#travel">Team</a>
+                               <a class=" scroll nav-link" href="#why-us">Why Us</a>
                            </li>
                            <li class="nav-item">
-                               <a class=" scroll nav-link" href="#clint-review">Clint</a>
+                               <a class=" scroll nav-link" href="#how-we-work">How We Work</a>
                            </li>
                            <li class="nav-item">
-                               <a class=" scroll nav-link" href="#footer-main">Talk to us</a>
+                               <a class=" scroll nav-link" href="#contact">Talk to us</a>
                            </li>
                        </ul>
                    </div>
@@ -53,13 +59,16 @@
               <div class="row">
                   <div class="col-md-7 col-sm-12 no-left-padding">
                       <div class="intro-left-area">
-                          <div class="heading-mini">
+                          <div class="heading-mini" data-aos="fade-up"
+     data-aos-duration="1100">
                               <h3>design &  <span>develop</span></h3>
                           </div>
-                          <div class="heading-moto">
+                          <div class="heading-moto" data-aos="fade-up"
+     data-aos-duration="1100" data-aos-delay="300">
                               <h1>Parfect web solution</h1>
                           </div>
-                          <div class="intro-text">
+                          <div class="intro-text" data-aos="fade-up"
+     data-aos-duration="1100" data-aos-delay="600">
                               <p>
                                   We use strategies, technologies and campaigns <br>to help brands achieve extraordinary things.
                               </p>
@@ -181,9 +190,10 @@
           </div>
       </section>
       <!-- about-us -->
-      <section class="services">
+      <section class="services" id="services">
           <div class="container">
-              <div class="heading-area">
+              <div class="heading-area" data-aos="fade-up"
+     data-aos-duration="1100">
                   <h1>Services</h1>
               </div> 
               <div class="row service-main">
@@ -276,26 +286,42 @@
       </section>
       <section class="empty"></section>
       <!-- recent-project -->
-      <section class="recent-project">
+      <section class="recent-project" id="project">
           <div class="container">
-              <div class="heading-area">
-                  <h1>Recent Project</h1>
+              <div class="heading-area" data-aos="fade-up"
+     data-aos-duration="1100" data-aos-delay="600">
+                  <h1>Recent Projects</h1>
               </div>
               <div class="row project-main">
                   <div class="col-md-4 col-sm-12">
-                      <div class="project-single-content" style="background: url(images/demo1.jpg); background-size: cover;">
-                          
-                      </div>
+                      <a href="http://theb2bgroup.uk.com/" target="_blank">
+                          <div class="project-single-content" style="background: url(images/site1.jpg); background-size: cover;" data-aos="fade-up"
+     data-aos-duration="1100">
+                              <div class="heading-text"><h4>The b2b group</h4>
+                                  <h6>E-commerce</h6>
+                              </div>
+                          </div>
+                      </a>
                   </div>
                   <div class="col-md-4 col-sm-12">
-                      <div class="project-single-content" style="background: url(images/demo3.jpg); background-size: cover;">
-                          
-                      </div>
+                      <a href="http://youcompareinsurance.co.uk/" target="_blank">
+                          <div class="project-single-content" style="background: url(images/site2.png); background-size: cover;" data-aos="fade-up"
+     data-aos-duration="1100">
+                              <div class="heading-text"><h4>Youcompare Insurance</h4>
+                                  <h6>Insurance Agency</h6>
+                              </div>
+                          </div>
+                      </a>
                   </div>
                   <div class="col-md-4 col-sm-12">
-                      <div class="project-single-content" style="background: url(images/demo4.jpg); background-size: cover;">
-                          
-                      </div>
+                      <a href="http://ornatei.co.uk/" target="_blank">
+                          <div class="project-single-content" style="background: url(images/site3.jpg); background-size: cover;" data-aos="fade-up"
+     data-aos-duration="1100">
+                              <div class="heading-text"><h4>Ornatei</h4>
+                                  <h6>Agency</h6>
+                              </div>
+                          </div>
+                      </a>
                   </div>
               </div>
           </div> 
@@ -303,9 +329,10 @@
       <section class="empty"></section>
       <!-- why-us -->
 
-      <section class="why-us">  
+       <section class="why-us" id="why-us">  
           <div class="container">
-              <div class="heading-area">
+              <div class="heading-area" data-aos="fade-up"
+     data-aos-duration="1100">
                   <h1>Why you should hire us?</h1>
               </div>  
           </div>
@@ -314,20 +341,26 @@
                   <div class="row">
                       <div class="col-md-4 col-sm-12 no-left-padding">
                           <div class="why-us-single-content">
-                              <h2>Agility</h2>
-                              <p>We’re flexible, resourceful, and adapt quickly to drive commercial success.</p>
+                              <h2 data-aos="fade-up"
+     data-aos-duration="1100">Agility</h2>
+                              <p data-aos="fade-up"
+     data-aos-duration="1100" data-aos-delay="300">We’re flexible, resourceful, and adapt quickly to drive commercial success.</p>
                           </div>
                       </div>
                       <div class="col-md-4 col-sm-12">
                           <div class="why-us-single-content">
-                              <h2>Insight</h2>
-                              <p>We’re flexible, resourceful, and adapt quickly to drive commercial success.</p>
+                              <h2 data-aos="fade-up"
+     data-aos-duration="1100">Insight</h2>
+                              <p data-aos="fade-up"
+     data-aos-duration="1100" data-aos-delay="300">We’re flexible, resourceful, and adapt quickly to drive commercial success.</p>
                           </div>
                       </div>
                       <div class="col-md-4 col-sm-12 no-right-padding">
                           <div class="why-us-single-content">
-                              <h2>Transparency</h2>
-                              <p>We’re flexible, resourceful, and adapt quickly to drive commercial success.</p>
+                              <h2 data-aos="fade-up"
+     data-aos-duration="1100">Transparency</h2>
+                              <p data-aos="fade-up"
+     data-aos-duration="1100" data-aos-delay="300">We’re flexible, resourceful, and adapt quickly to drive commercial success.</p>
                           </div>
                       </div>
                   </div>
@@ -336,13 +369,15 @@
       </section>
 
       <!-- how-we-work -->
-      <section class="how-we-work-area">
+      <section class="how-we-work-area" id="how-we-work">
           <div class="container">
               <div class="heading-area">
-                  <h1>How we work</h1>
+                  <h1 data-aos="fade-up"
+     data-aos-duration="1100">How we work</h1>
               </div>
               <div class="how-we-work-main">
-                  <div class="how-we-work-single-content">
+                  <div class="how-we-work-single-content" data-aos="fade-up"
+     data-aos-duration="1100">
                       <div class="direction">
                           <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
                             <g>
@@ -355,20 +390,15 @@
                           Every campaign begins with research and planning. Using data from our enterprise-level search tools, we uncover the insights that will drive your online success
                       </p>
                   </div>
-                  <div class="how-we-work-single-content content-2 justify-content-end">
-                    <!--    <div class="direction">
-                          <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
-                            <g>
-                              <path fill="#1D1D1B" d="m63.386,16.193l.002-.002c0.002-0.003 0.004-0.006 0.006-0.01 0.172-0.195 0.298-0.43 0.399-0.678 0.032-0.076 0.053-0.148 0.076-0.225 0.058-0.191 0.094-0.389 0.106-0.596 0.006-0.076 0.018-0.148 0.016-0.226 0-0.04 0.01-0.076 0.008-0.115-0.014-0.239-0.062-0.47-0.136-0.687-0.006-0.023-0.022-0.041-0.03-0.064-0.088-0.239-0.214-0.451-0.363-0.645-0.021-0.027-0.028-0.063-0.05-0.09l-10.311-12.146c-0.789-0.93-2.084-0.948-2.894-0.037-0.808,0.91-0.823,2.402-0.032,3.334l5.558,6.549c-8.121-1.076-16.104,0.633-16.481,0.717-24.646,4.467-42.087,27.227-38.88,50.736 0.159,1.164 1.028,1.992 2.019,1.992 0.106,0 0.212-0.009 0.32-0.027 1.116-0.203 1.878-1.409 1.704-2.696-2.857-20.94 13.056-41.282 35.537-45.358 0.103-0.024 8.351-1.794 16.117-0.574l-8.577,5.093c-1.005,0.598-1.398,2.02-0.881,3.177 0.516,1.159 1.748,1.608 2.756,1.017l13.52-8.028c0.183-0.111 0.347-0.25 0.491-0.411z"/>
-                            </g>
-                          </svg>
-                      </div> -->
+                  <div class="how-we-work-single-content content-2" data-aos="fade-up"
+     data-aos-duration="1100">
                       <h3>Measurement</h3>
                       <p>
                           Our monthly reports are clear, transparent, and tailored to what’s relevant to you. All our activity is tied to your goals, targets and KPIs, and when we discuss your progress each month, we’ll explain how our actions have helped you move closer to your objectives, as well as sharing any new strategic opportunities
                       </p>
                   </div>
-                  <div class="how-we-work-single-content content-3">
+                  <div class="how-we-work-single-content content-3" data-aos="fade-up"
+     data-aos-duration="1100">
                        <div class="direction">
                           <svg width="64" version="1.1" xmlns="http://www.w3.org/2000/svg" height="64" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
                             <g>
@@ -386,13 +416,12 @@
           </div>
       </section>
 
-
       <!-- team -->
       <section class="empty"></section>
 
       <!-- talk to us -->
 
-      <section class="talk-to-us">
+      <section class="talk-to-us" id="contact">
           <div class="container">
               <div class="heading-area">
                   <h1>Lets start a project</h1>
@@ -429,6 +458,9 @@
                                 <textarea class="form-control" rows="5" id="text"></textarea>
                             </div>
                         </div>
+                   </div>
+                   <div class="button-area text-right">
+                        <button class="submit">send</button>
                    </div>
               </form>
               <div class="footer">
@@ -481,5 +513,10 @@
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
+      <script src="js/aos.js"></script>
+      <script>
+          AOS.init();
+      </script>
+      <script src="js/custom.js"></script>
   </body>
 </html>
